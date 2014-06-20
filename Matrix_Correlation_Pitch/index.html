@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Securities Matrix Correlation</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Securities Matrix Correlation">
+  <meta name="author" content="Ricardo Naya">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Securities Matrix Correlation</h1>
+    <h2>An app for calculating correlations among different securities</h2>
+    <p>Ricardo Naya<br/>Data Scientist</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>What</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Securities Matrix Correlation allows to generate a matrix containing the correlations
+among the different entered securities.</p>
+
+<p>Each of them will be placed in the intersection cell between the security in the row and the 
+security in the column.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Why</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>When building a stock portfolio, is important to know how correlated are the different stocks or funds.</p>
+
+<p>A diversified portfolio (low correlation among its stocks) will have much less risk for the same amount of expected return than a non-diversified portfolio (high correlation among its stocks)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>How</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The only information required to the user for the calculation will be:</p>
+
+<ul>
+<li>A list of securities separated by comma</li>
+<li>The period in which the correlation should be calculated.</li>
+</ul>
+
+<p>Once the application has this information, it will request the returns information for each security through the package &quot;stockPortfolio&quot;. These returns will be calculated weekly.</p>
+
+<p>Once we have these returns, the app will calculate the covariance matrix, measuring the variance of the returns of one security against the other each week.</p>
+
+<p>Finally, this covariance will be normalized in the correlation matrix.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Where</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application can be run from the url: <a href="https://alfil.shinyapps.io/correlation_matrix/"><a href="https://alfil.shinyapps.io/correlation_matrix/">https://alfil.shinyapps.io/correlation_matrix/</a></a></p>
+
+<p>For example, if we calculate it for the securities TLT, SPY and USO. We would obtain:</p>
+
+<p><img src="assets/fig/chunk.png" alt="plot of chunk chunk"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='What'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Why'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='How'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Where'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
